@@ -72,6 +72,7 @@ class ListTimelineViewController: UIViewController {
         self.navigator.show(segue: .listPeople(self.viewModel.account, self.viewModel.list), sender: self)
       })
       .disposed(by: bag)
+    
     // Show tweets in table view
     let dataSource = RxTableViewRealmDataSource<Tweet>(cellIdentifier: "TweetCellView", cellType: TweetCellView.self) { cell, _, tweet in
       cell.update(with: tweet)
